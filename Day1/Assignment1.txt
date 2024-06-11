@@ -1,0 +1,17 @@
+Assignment 1:- Write the network terminologies with example.
+
+Network: A collection of interconnected devices that can communicate with each other. These devices can be computers, printers, servers, smartphones, and more.  Imagine a home network where several computers, a phone, and a smart TV can all connect and share resources like a printer or the internet connection.
+
+Node: Any device that is connected to a network.  In the previous example, each computer, phone, and smart TV would all be considered individual nodes on the network.
+
+Protocol: A set of rules that define how devices communicate on a network.  Think of a protocol as a common language that all the devices understand.  A widely used protocol is TCP/IP, which helps ensure data is delivered accurately across the internet.
+
+IP Address: A unique numerical identifier assigned to each device on a network.  This address acts like a mailing address for your device on the network, allowing other devices to find and send data to it.  An example of an IP address might be 192.168.1.100.
+
+Router: A networking device that connects multiple networks together and forwards data packets between them.  Think of a router as a traffic director for your network, sending data packets to the correct device.  Your home router would connect your internal network to the wider internet.
+
+Switch: A networking device that connects devices on a network and forwards data packets between them.  While routers handle traffic between different networks, switches manage traffic within a single network, like your home network.  A switch can improve efficiency by sending data directly to the intended device.
+
+Firewall: A security device or software that monitors and controls incoming and outgoing network traffic.  A firewall acts like a security guard for your network, filtering out suspicious or unwanted traffic to protect your devices from harm.
+
+DNS (Domain Name System): A system that translates domain names (like [invalid URL removed]) into IP addresses.  Since computers communicate using IP addresses, DNS acts like a phonebook, translating the user-friendly domain names into the numerical addresses that devices can understand.

@@ -1,0 +1,21 @@
+Assignment 2: Draw your Home Network Topology and explain how you are accessing the RPS Lab environment.
+
+Home Network Topology
+
+  	 Internet
+            |
+            |
+            |
+            v
+           Router
+            |
+            | (wired connection)
+            |
+        Desktop Computer
+            |
+            | (wireless connection)
+            v
+           Laptop
+            |
+            v
+        Smartphone
