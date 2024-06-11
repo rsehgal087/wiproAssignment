@@ -1,0 +1,4 @@
+Assignment 1:
+Agile Project Planning - Create a one-page project plan for a new software feature using Agile planning techniques. Include backlog items with estimated story points and a prioritized list of user stories.
+
+Project plan is attached in Assignment1 folder with a pdf document and excel sheet

@@ -1,0 +1,33 @@
+Assignment1
+30 essential Linux commands with explaintion
+
+ls: Lists directory contents.
+pwd: Prints the current working directory.
+mkdir: Creates a new directory.
+cd: Changes the current directory.
+touch: Creates an empty file or updates the timestamp of an existing file.
+cat: Concatenates and displays the content of files.
+nano: A text editor for creating or editing files.
+rm: Removes files or directories.
+who: Shows who is logged on.
+whoami: Prints the current user's name.
+date: Displays the current date and time.
+sudo: Executes a command with superuser privileges.
+apt: Package management command in Debian-based systems.
+cal: Displays a calendar.
+cp: Copies files or directories.
+mv: Moves or renames files or directories.
+rmdir: Removes empty directories.
+head: Displays the beginning of a file.
+tail: Displays the end of a file.
+sort: Sorts lines of text files.
+uniq: Filters adjacent matching lines from a sorted file.
+history: Displays previously executed commands.
+grep: Searches for patterns in files.
+ssh: Connects to a remote server securely.
+scp: Securely copies files between hosts.
+gzip: Compresses files.
+tar: Archives files.
+find: Searches for files and directories.
+chmod: Changes the permissions of files or directories.
+chown: Changes the ownership of files or directories.
