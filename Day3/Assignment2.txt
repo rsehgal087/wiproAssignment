@@ -1,0 +1,26 @@
+Assignment 2: Produce a comparative infographic of TDD, BDD, and FDD methodologies. Illustrate their unique approaches, benefits, and suitability for different software development contexts. Use visuals to enhance understanding.
+
+Write test
+     |
+Write code
+     |
+  Test  should pass or else refactor it
+     | 
+    Run
+     | 
+   Repeat
+
+
+
+
+TDD:- Test drive development
+ 
+
+•	First five a test
+•	Then write a code to pass the test
+•	If not pass, refactor it
+•	Repeat the process, create the tests and pass it.
+•	Good Quality code bcoz test done until it pass(ensure code quality)
+•	Used for small projects
+•	Reduce bugs
+•	Writing tests first ensure better design

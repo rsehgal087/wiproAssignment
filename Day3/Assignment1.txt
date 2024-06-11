@@ -1,0 +1,77 @@
+Assignment 1: Create an infographic illustrating the Test-Driven Development (TDD) process. Highlight steps like writing tests before code, benefits such as bug reduction, and how it fosters software reliability.
+
+TDD:- test driven development.
+1.	Write a test
+2.	Write a code
+3.	Refactor the code
+Benefits:- 
+	Ensure code quality
+	Simplifies code debugging
+	Encourages simple designs
+Suitability:- 
+•	High reliability
+•	Complex logic
+•	Frequent refactoring
+BDD:- behaviour driven development
+1.	Define behaviour in plain language
+2.	Write tests based on behaviour
+3.	Develop code to pass the tests
+Benefits:-
+	Enhaces collaboration
+	Clear sepcifications
+	Ensures it reaches client and bussines needs
+Suitability:- 
+•	Project focus on user experience
+•	Need clear communication
+•	Frequent client interaction
+FDD:- feature driven development
+1.	Develop total model
+2.	Build feature list
+3.	Plan feature ist
+4.	Design by feature
+5.	Build by feature
+Benefits:- 
+	focus on delivering value
+	improved project tracking
+	scalable for large projects.
+Suitability:- 
+•	large scale projects.
+•	Project needs frequent releases
+•	Teams with mixed expertise
+
+
+	
+TTD:-                                	    write test
+		                    		   |
+                                             Write code to pass test cases   -------pass-----create new tests again
+                                                   | 
+                                            Not passed refactor
+                                                   |
+                                              Repeat
+
+BDD:-                                   
+                                              Explain behaviour in plain language
+                                                        | 
+                                               Create test based on defined behaviour 
+                                                        |
+                                                Develop code to pass the tests
+                                                        | 
+                                                    Run al the tests
+                                                        |
+                                                      Repeat
+
+
+FDD:-   
+							     Develop overall model
+                                                                         |
+                                                              Build a feature list
+                                                                         |
+                                                                 Plan by feature
+                                                                         |
+                                                                Design by feature
+                                                                         | 
+                                                                   Build by feature
+
+
+
+
