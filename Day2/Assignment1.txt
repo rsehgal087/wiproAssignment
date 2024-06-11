@@ -1,0 +1,18 @@
+Assignment 1: SDLC Overview - Create a one-page infographic that outlines the SDLC phases (Requirements, Design, Implementation, Testing, Deployment), highlighting the importance of each phase and how they interconnect.
+
+Sdlc phases :- requirements-> analysis-> design-> implementation-> testing-> deployment-> maintanence
+
+Requirements:- gathering requirements and making documents as client needs.
+
+Analysis:-  analysing the document , how it works, with what technologies, with how much budget.
+
+Design:- designing the document in understandable manner with like segregating as high level design and low level design.
+
+Implementation:- using technologies we convert the design into the code , create the data as per the client requirement.
+
+Testing:- test the implemented code wether it missed any thing as per the client idea, if any thing arises it again send it to the development team they will recorrect.
+In some modules inn sdlc  the testing part is done at the each level after done with that part it tests and anything arises it says to correct, and in somme phases it checks then it will fix if again any changes want to make , it wont encourage that. Once it done that’s the final.
+
+Deployment:- once we are done from our testing side, and feels ok. We will send it to the client/ customer. They will check wether it is created as per their needs or not. If not it reaches to the testing team again the process go on.
+
+Maintanence:- after the product is released to client/ customer. If any issues rises in while using in sometime. The team should be solved.
