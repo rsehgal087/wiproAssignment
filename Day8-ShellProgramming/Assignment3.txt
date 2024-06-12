@@ -1,0 +1,20 @@
+Assignment 3: Create a function that takes a filename as an argument and prints the number of lines in the file. Call this function from your script with different filenames
+
+->
+#!/bin/bash
+
+countlines()
+{
+ filename=$1
+ 
+ if [ -e $filename ]
+   then
+     echo "file is present"
+     lines=$(wc -l <"$filename")
+     echo "number of lines present in $filename is $lines"
+   else
+    echo "no file present"
+fi
+}
+
+countlines "file1.txt"

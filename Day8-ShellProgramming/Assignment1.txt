@@ -1,0 +1,18 @@
+Assignment 1: Ensure the script checks if a specific file (e.g., myfile.txt) exists in the current directory. If it exists, print "File exists", otherwise print "File not found".
+
+->
+#!/bin/bash
+
+filecheck()
+{
+ filename=$1
+ 
+ if [ -e $filename ]
+   then
+     echo "File exists"
+   else
+    echo "File not found"
+fi
+}
+
+filecheck "myfile.txt"

@@ -1,0 +1,17 @@
+Assignment 2: Write a script that reads numbers from the user until they enter '0'. The script should also print whether each number is odd or even.
+
+->
+#!/bin/bash
+
+read -p "enter a number (0 to quit): " number
+
+while [[ $number -ne 0 ]]; do
+  if [[ $(( number % 2 )) -eq 0 ]]; then
+    echo "$number is even"
+  else
+    echo "$number is odd"
+  fi
+  read -p "enter a number (0 to quit): " number
+done
+
+echo "exiting"
