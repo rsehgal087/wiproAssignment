@@ -1,0 +1,12 @@
+Assignment 2: 
+Design a database schema for a library system, including tables, fields, and constraints like NOT NULL, UNIQUE, and CHECK. Include primary and foreign keys to establish relationships between tables.
+
+create table books
+(
+books_id number(10) primary key,
+title varchar2(40) not null,
+status varchar2(40),
+author_id number(10),
+foreign key (author_id) references author (author_id) on delete set null
+);
+

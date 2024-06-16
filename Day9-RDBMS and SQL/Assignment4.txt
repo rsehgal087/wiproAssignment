@@ -1,0 +1,48 @@
+Assignment 4: 
+Craft a query using an INNER JOIN to combine 'orders' and 'customers' tables for customers in a specified region, and a LEFT JOIN to display all customers including those without orders.
+
+-- Create customers table
+CREATE TABLE customers (
+    cust_id NUMBER(10) PRIMARY KEY,
+    name VARCHAR2(50) NOT NULL,
+    email VARCHAR2(50) UNIQUE,
+    city VARCHAR2(30)
+);
+
+-- Insert data into customers table
+INSERT INTO customers VALUES (101, 'John Doe', 'john.doe@example.com', 'New York');
+INSERT INTO customers VALUES (102, 'Jane Smith', 'jane.smith@example.com', 'Los Angeles');
+INSERT INTO customers VALUES (103, 'Michael Johnson', 'michael.johnson@example.com', 'Chicago');
+INSERT INTO customers VALUES (104, 'Emily Brown', 'emily.brown@example.com', 'Houston');
+INSERT INTO customers VALUES (105, 'William Lee', 'william.lee@example.com', 'San Francisco');
+INSERT INTO customers VALUES (106, 'Sophia Garcia', 'sophia.garcia@example.com', 'Miami');
+
+-- Create orders table
+CREATE TABLE orders (
+    order_id NUMBER(10) PRIMARY KEY,
+    order_name VARCHAR2(50) NOT NULL,
+    cust_id NUMBER(10),
+    FOREIGN KEY(cust_id) REFERENCES customers(cust_id)
+);
+
+-- Insert data into orders table
+INSERT INTO orders VALUES (1001, 'Laptop', 101);
+INSERT INTO orders VALUES (1002, 'Smartphone', 102);
+INSERT INTO orders VALUES (1003, 'Tablet', 102);
+INSERT INTO orders VALUES (1004, 'Headphones', 103);
+INSERT INTO orders VALUES (1005, 'Coffee Maker', 104);
+INSERT INTO orders VALUES (1006, 'Fitness Tracker', 105);
+INSERT INTO orders VALUES (1007, 'Smartwatch', 103);
+INSERT INTO orders VALUES (1008, 'Speaker', 106);
+INSERT INTO orders VALUES (1009, 'Keyboard', 101);
+INSERT INTO orders VALUES (1010, 'Mouse', 104);
+
+SELECT c.name, c.email, c.city, o.order_name
+FROM customers c
+INNER JOIN orders o ON c.cust_id = o.cust_id
+WHERE c.city = 'New York';
+
+SELECT c.name, c.email, c.city, o.order_name
+FROM customers c
+LEFT JOIN orders o ON c.cust_id = o.cust_id
+WHERE c.city = 'Houston';
