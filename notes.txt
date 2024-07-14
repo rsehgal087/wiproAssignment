@@ -1,1 +1,76 @@
 https://docs.google.com/document/d/1wEfnD9VAVmOmlK6wKAAF7X_kVh_nBtYSZX7r25R4sOs/edit?usp=sharing
+
+package com.wipro.service;
+
+import com.wipro.model.Car;
+
+import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.List;
+import java.util.Optional;
+import java.util.stream.Collectors;
+
+public class CarService {
+    // returns sum of prices of all the cars in the list
+    public double getSumOfPrices(List<Car> carList) {
+        return carList.stream()
+                .mapToDouble(Car::getPrice)
+                .sum();
+    }
+
+    // returns list of all car names
+    public List<String> getCarNames(List<Car> carList) {
+        return carList.stream()
+                .map(Car::getCarName)
+                .collect(Collectors.toList());
+    }
+
+    // returns Cars in the range of 8 Lakhs to 15 Lakhs
+    public List<Car> getCarsInRange(List<Car> carList) {
+        return carList.stream()
+                .filter(car -> car.getPrice() >= 800000 && car.getPrice() <= 1500000)
+                .collect(Collectors.toList());
+    }
+
+    // returns car which has least price
+    public Car getLowestCar(List<Car> carList) {
+        return carList.stream()
+                .min(Comparator.comparingDouble(Car::getPrice))
+                .orElse(null);
+    }
+
+    // returns List of Cars in the descending order of price
+    public List<Car> getSortedCars(List<Car> carList) {
+        return carList.stream()
+                .sorted(Comparator.comparingDouble(Car::getPrice).reversed())
+                .collect(Collectors.toList());
+    }
+}
+
+
+package com.wipro.app;
+
+import com.wipro.model.Car;
+import com.wipro.service.CarService;
+
+import java.util.Arrays;
+import java.util.List;
+
+public class Tester {
+    public static void main(String[] args) {
+        Car car1 = new Car("Toyota", "Corolla", 950000.0);
+        Car car2 = new Car("Honda", "Civic", 1200000.0);
+        Car car3 = new Car("Hyundai", "Elantra", 1400000.0);
+        Car car4 = new Car("Maruti", "Alto", 500000.0);
+
+        List<Car> carList = Arrays.asList(car1, car2, car3, car4);
+
+        CarService carService = new CarService();
+
+        System.out.println("Sum of Prices: " + carService.getSumOfPrices(carList));
+        System.out.println("Car Names: " + carService.getCarNames(carList));
+        System.out.println("Cars in Range (8 Lakhs to 15 Lakhs): " + carService.getCarsInRange(carList));
+        System.out.println("Car with Lowest Price: " + carService.getLowestCar(carList));
+        System.out.println("Cars Sorted by Price (Descending): " + carService.getSortedCars(carList));
+    }
+}
