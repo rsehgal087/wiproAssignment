@@ -86,3 +86,5 @@ public class Tester {
                 .collect(Collectors.groupingBy(Person::getAddress, Collectors.summingInt(p -> 1)));
     }
 
+ System.out.println("City-wise person count...");
+        cityMap.forEach((city, count) -> System.out.println(city + " : " + count));
