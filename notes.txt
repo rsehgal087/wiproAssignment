@@ -74,3 +74,15 @@ public class Tester {
         System.out.println("Cars Sorted by Price (Descending): " + carService.getSortedCars(carList));
     }
 }
+
+    private static List<Person> sortedPersons(List<Person> personList) {
+        return personList.stream()
+                .sorted((p1, p2) -> p1.getName().compareTo(p2.getName()))
+                .toList();
+    }
+    
+    private static Map<String, Integer> getPersonCountByCity(List<Person> personList) {
+        return personList.stream()
+                .collect(Collectors.groupingBy(Person::getAddress, Collectors.summingInt(p -> 1)));
+    }
+
