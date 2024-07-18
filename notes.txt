@@ -118,3 +118,22 @@ public class Tester {
         
         return personList;
     }
+
+
+    private static void displayAllPersons() {
+        try {
+            List<Person> personList = personService.getAllPersons();
+            for (Person person : personList) {
+                System.out.println("AdharCard: " + person.getAdharCard());
+                System.out.println("Name: " + person.getName());
+                System.out.println("Gender: " + person.getGender());
+                System.out.println("Birthdate: " + person.getBirthdate());
+                System.out.println("Address: " + person.getAddress());
+                System.out.println("Mobile: " + person.getMobile());
+                System.out.println("---------------------------------");
+            }
+        } catch (PersonException e) {
+            e.printStackTrace();
+        }
+    }
+
