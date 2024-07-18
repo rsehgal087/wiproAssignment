@@ -88,3 +88,33 @@ public class Tester {
 
  System.out.println("City-wise person count...");
         cityMap.forEach((city, count) -> System.out.println(city + " : " + count));
+
+
+---------------------------------------------------------------
+
+
+ public List<Person> getAllPersons() throws SQLException {
+        String sql = "SELECT * FROM person";
+        List<Person> personList = new ArrayList<>();
+        
+        try (
+            Connection connection = OracleConnection.getConnection();
+            PreparedStatement preparedStatement = connection.prepareStatement(sql);
+            ResultSet resultSet = preparedStatement.executeQuery();
+        ) {
+            while (resultSet.next()) {
+                Person person = new Person();
+                person.setAdharCard(resultSet.getLong("adharCard"));
+                person.setName(resultSet.getString("name"));
+                person.setGender(Gender.valueOf(resultSet.getString("gender")));
+                person.setBirthdate(resultSet.getDate("birthdate").toLocalDate());
+                person.setAddress(resultSet.getString("address"));
+                person.setMobile(resultSet.getLong("mobile"));
+                personList.add(person);
+            }
+        } catch (SQLException e) {
+            throw e;
+        }
+        
+        return personList;
+    }
