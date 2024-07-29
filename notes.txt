@@ -322,5 +322,28 @@ https://66a38c7544aa63704581a278.mockapi.io/api/v1/:endpoint
 https://66a39d8144aa63704581e6fe.mockapi.io/:endpoint
 
 -----------------------------------------------
+
 https://docs.google.com/document/d/1GEBnlSPHsEDeTdvNSzuvufbdfCnu54BqYTm4qPAYMI0/edit
+
+-------------------------------------
+<body>
+<h1> Check the given number is even or odd..</h1> 
+<FORM> |
+Enter a number : <input type="text" name="num"/> 
+<input type="submit"/> 
+</FORM> |
+<br/> <br/> 
+<%
+if(request.getParameter("num") != null){ 
+String strNum = request.getParameter ("num"); 
+
+int num = Integer.parseInt (strNum); //"25" --> 25
+
+if (num % 2 == 0) 
+out.println ("Given number is Even");
+
+else 
+out.println ("Given number is odd..."); 
+
+) 
 
